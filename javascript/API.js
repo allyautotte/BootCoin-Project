@@ -21,14 +21,16 @@ var database = firebase.database();
 
 
 // Currency exchange rate for KRW
+
+
 	$.ajax({
-		url: "https://www.apilayer.net/api/live?access_key=1ac8896495e4d0dcb2b9b34f5c3bef1b",
+		url: "https://openexchangerates.org/api/latest.json?app_id=e3ea0a513c85410bb28988707ffd3724",
 		method: "GET"
 	}).done(function(response) {
 		console.log(response);
-		console.log("exchange currency rate " + response.quotes.USDKRW);
+		console.log("exchange currency rate " + response.rates.KRW);
 
-		var exchangeRate = response.quotes.USDKRW;
+		var exchangeRate = response.rates.KRW;
 
 		exchangeRates.push(exchangeRate);
 
