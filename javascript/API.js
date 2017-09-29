@@ -22,7 +22,7 @@ var database = firebase.database();
 
 // Currency exchange rate for KRW
 	$.ajax({
-		url: "http://www.apilayer.net/api/live?access_key=1ac8896495e4d0dcb2b9b34f5c3bef1b",
+		url: "https://www.apilayer.net/api/live?access_key=1ac8896495e4d0dcb2b9b34f5c3bef1b",
 		method: "GET"
 	}).done(function(response) {
 		console.log(response);
